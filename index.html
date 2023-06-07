@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/media-query.css">
     <title>Login</title>
@@ -23,8 +24,21 @@
                     no seu ambiente.
                 </p>
 
-                <form action="login.php" method="post">
-                    
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <i class="bi bi-person-fill"></i>
+                        <input type="email" name="login" id="login" placeholder="Seu e-mail" autocomplete="email" required maxlength="30">
+                        <label for="login">Login</label>
+                    </div>
+
+                    <div class="campo">
+                        <i class="bi bi-key-fill"></i>
+                        <input type="password" name="senha" id="senha" placeholder="Sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="senha">Senha</label>
+                    </div>
+
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">Esquecir a senha <i class="bi bi-envelope-fill"></i></a>
                 </form>
             </div>
         </section>
